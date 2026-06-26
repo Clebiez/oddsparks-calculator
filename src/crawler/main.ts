@@ -2,8 +2,9 @@ import { exec } from "node:child_process";
 import { promisify } from "node:util";
 import * as cheerio from "cheerio";
 
-import { ItemEnum } from "../models/Item";
-import { SparkEnum } from "../models/Spark";
+import { ItemEnum } from "../domain/Item";
+import { SparkEnum } from "../domain/Spark";
+import { writeFile } from "node:fs/promises";
 
 const execAsync = promisify(exec);
 
@@ -24,16 +25,19 @@ const getQuantityFromString = (
 const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 const getRecipes = async (items: string[]) => {
+  const recipes = [];
   for (let index = 0; index < items.length; index++) {
-    await wait(1000); // attend 2 secondes
+    await wait(2000);
     const element = items[index];
+    console.log("🚀 ~ getRecipes ~ element:", element);
     const url = `https://oddsparks.wiki.gg/wiki/${element}`;
     const { stdout } = await execAsync(
-      `curl -s ${url} -A "OddSparkCalculator/1.0 (padrohl@gmail.com)"`,
+      `curl -s ${url} -A "CalculatorOddspark/1.0 (test@gmail.com)"`,
     );
 
     const $ = cheerio.load(stdout);
     const title = $("h1").first().text();
+
     const recipe = $(".recipe-calc").first();
     const itemsPerMinute = Number(
       $(recipe).find(".calculated-duration-in-min").text(),
@@ -58,17 +62,29 @@ const getRecipes = async (items: string[]) => {
             .text(),
         ),
       );
-      inputs.push(item);
+      if (item.item && item.quantity > 0 && !Number.isNaN(item.quantity)) {
+        inputs.push(item);
+      }
     }
-    console.log({
+
+    const recipeData = {
       title,
       itemsPerMinute,
       building,
       output,
       numberOfItems,
       inputs,
-    });
+    };
+
+    if (recipeData.output.quantity > 0) {
+      recipes.push(recipeData);
+    } else {
+      console.log(recipeData);
+    }
   }
+  return recipes;
 };
 
-getRecipes([...items, ...sparks]);
+const allRecipes = await getRecipes([...items, ...sparks]);
+
+await writeFile("./data.json", JSON.stringify(allRecipes));
