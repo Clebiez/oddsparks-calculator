@@ -244,17 +244,6 @@
 		]
 	},
 	{
-		"title": "Miasma",
-		"itemsPerMinute": 3.75,
-		"building": "Miasma Collector",
-		"output": { "item": "Miasma Vial", "quantity": 2 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Small Vial", "quantity": 2 },
-			{ "item": "Miasma", "quantity": 2 }
-		]
-	},
-	{
 		"title": "Miasma Vial",
 		"itemsPerMinute": 3.75,
 		"building": "Miasma Collector",
@@ -301,18 +290,6 @@
 		"inputs": []
 	},
 	{
-		"title": "Volcanic Soil",
-		"itemsPerMinute": 2.5,
-		"building": "Geode Breaker",
-		"output": { "item": "Glowshroom", "quantity": 10 },
-		"numberOfItems": 3,
-		"inputs": [
-			{ "item": "Bumpy Geode", "quantity": 1 },
-			{ "item": "Volcanic Soil", "quantity": 20 },
-			{ "item": "Coal", "quantity": 10 }
-		]
-	},
-	{
 		"title": "Glowshroom",
 		"itemsPerMinute": 2.5,
 		"building": "Geode Breaker",
@@ -344,30 +321,6 @@
 		"inputs": [{ "item": "Copper Ingot", "quantity": 2 }]
 	},
 	{
-		"title": "Bumpy Geode",
-		"itemsPerMinute": 2.5,
-		"building": "Geode Breaker",
-		"output": { "item": "Cracked Geode", "quantity": 10 },
-		"numberOfItems": 3,
-		"inputs": [
-			{ "item": "Geode Cluster", "quantity": 1 },
-			{ "item": "Bumpy Geode", "quantity": 10 },
-			{ "item": "Shiny Geode", "quantity": 10 }
-		]
-	},
-	{
-		"title": "Shiny Geode",
-		"itemsPerMinute": 2.5,
-		"building": "Geode Breaker",
-		"output": { "item": "Cracked Geode", "quantity": 10 },
-		"numberOfItems": 3,
-		"inputs": [
-			{ "item": "Geode Cluster", "quantity": 1 },
-			{ "item": "Bumpy Geode", "quantity": 10 },
-			{ "item": "Shiny Geode", "quantity": 10 }
-		]
-	},
-	{
 		"title": "Cracked Geode",
 		"itemsPerMinute": 2.5,
 		"building": "Geode Breaker",
@@ -380,39 +333,12 @@
 		]
 	},
 	{
-		"title": "Frozen Log",
-		"itemsPerMinute": 3.75,
-		"building": "Sawbench",
-		"output": { "item": "Stellar Ice", "quantity": 3 },
-		"numberOfItems": 1,
-		"inputs": [{ "item": "Frozen Log", "quantity": 1 }]
-	},
-	{
-		"title": "Frozen Stone",
-		"itemsPerMinute": 1.875,
-		"building": "Stonecutter",
-		"output": { "item": "Stellar Ice", "quantity": 6 },
-		"numberOfItems": 1,
-		"inputs": [{ "item": "Frozen Stone", "quantity": 2 }]
-	},
-	{
 		"title": "Stellar Ice",
 		"itemsPerMinute": 3.75,
 		"building": "Sawbench",
 		"output": { "item": "Stellar Ice", "quantity": 3 },
 		"numberOfItems": 1,
 		"inputs": [{ "item": "Frozen Log", "quantity": 1 }]
-	},
-	{
-		"title": "Stellar Seed",
-		"itemsPerMinute": 0.938,
-		"building": "Plant Extractor",
-		"output": { "item": "Stellar Ice", "quantity": 5 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Stellar Leaves", "quantity": 2 },
-			{ "item": "Stellar Seed", "quantity": 3 }
-		]
 	},
 	{
 		"title": "Stellar Fertiliser",
@@ -512,14 +438,6 @@
 			{ "item": "Leaf Knot", "quantity": 2 },
 			{ "item": "Copper Seed", "quantity": 5 }
 		]
-	},
-	{
-		"title": "Copper Sap",
-		"itemsPerMinute": 0.938,
-		"building": "Plant Extractor",
-		"output": { "item": "Copper Seed", "quantity": 10 },
-		"numberOfItems": 2,
-		"inputs": []
 	},
 	{
 		"title": "Aether Apple",

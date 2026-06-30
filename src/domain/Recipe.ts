@@ -1,32 +1,48 @@
-import type { BuildingEnum } from "./Building";
-import { ItemEnum, type Item } from "./Item";
+import type { BuildingEnum } from './Building'
+import { ItemEnum } from './Item'
 
 export type ItemInput = {
-  item: Item;
-  quantity: number;
-};
+  item: ItemEnum
+  quantity: number
+}
 
 export type ItemOutput = ItemInput & {
-  itemPerMinute: number;
-};
+  itemPerMinute: number
+}
 
 export class Recipe {
-  constructor(
+  constructor (
     public inputs: ItemInput[],
     public output: ItemOutput,
     public building: BuildingEnum,
   ) {}
 
-  getOutputRate(spark: Item) {
-    switch (spark.name) {
-      case ItemEnum.Stumpy_Spark:
-        return this.output.itemPerMinute * 2;
-      case ItemEnum.Crafty_Spark:
-        return this.output.itemPerMinute * 2 * 50;
-      case ItemEnum.Handy_Spark:
-        return this.output.itemPerMinute * 2 * 150;
-      default:
-        return 0;
+  getOutputRate (spark: ItemEnum, quantity = 1) {
+    let output: number
+    switch (spark) {
+      case ItemEnum.Stumpy_Spark: {
+        output = this.output.itemPerMinute
+        break
+      }
+      case ItemEnum.Crafty_Spark: {
+        output = this.output.itemPerMinute * 1.5
+        break
+      }
+      case ItemEnum.Handy_Spark: {
+        output = this.output.itemPerMinute * 2.5
+        break
+      }
+
+      default: {
+        output = 0
+        break
+      }
     }
+
+    return output * quantity
+  }
+
+  getNumberOfRecipe (outputRate: number) {
+    return Math.ceil(outputRate / this.output.itemPerMinute)
   }
 }
