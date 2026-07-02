@@ -26,7 +26,7 @@
     <v-footer class="d-flex flex-col align-center justify-center ga-2 flex-wrap grow py-3 max-h-30" color="surface-light">
 
       <div class="flex-1-0-100 text-center mt-2">
-        v0.1 — <strong>OddSpark Calculator</strong>
+        <strong>OddSpark Calculator</strong> - v0.1
       </div>
 
       <div>
