@@ -39,6 +39,7 @@
 		"numberOfItems": 0,
 		"inputs": []
 	},
+	
 	{
 		"title": "Quartz",
 		"itemsPerMinute": 30,
@@ -187,6 +188,14 @@
 		"output": { "item": "Stone Plate", "quantity": 1 },
 		"numberOfItems": 1,
 		"inputs": [{ "item": "Stone", "quantity": 2 }]
+	},
+		{
+		"title": "Pebble",
+		"itemsPerMinute": 1.875,
+		"building": "Stonecutter",
+		"output": { "item": "Pebble", "quantity": 2 },
+		"numberOfItems": 1,
+		"inputs": [{ "item": "Stone", "quantity": 1 }]
 	},
 	{
 		"title": "Stone Spike",
@@ -632,6 +641,28 @@
 		]
 	},
 	{
+		"title": "Carry Spark",
+		"itemsPerMinute": 1.875,
+		"building": "Spark Workstation",
+		"output": { "item": "Carry Spark", "quantity": 1 },
+		"numberOfItems": 2,
+		"inputs": [
+			{ "item": "Crafty Spark", "quantity": 1 },
+			{ "item": "Sawn Timber", "quantity": 1 }
+		]
+	},
+	{
+		"title": "Crafty Spark",
+		"itemsPerMinute": 1.25,
+		"building": "Spark Workstation",
+		"output": { "item": "Crafty Spark", "quantity": 1 },
+		"numberOfItems": 2,
+		"inputs": [
+			{ "item": "Stumpy Spark", "quantity": 2 },
+			{ "item": "Wooden Panel", "quantity": 2 }
+		]
+	},
+	{
 		"title": "Scouty Spark",
 		"itemsPerMinute": 1.875,
 		"building": "Spark Workstation",
@@ -689,7 +720,7 @@
 	{
 		"title": "Handy Spark",
 		"itemsPerMinute": 0.938,
-		"building": "Spark Workshop",
+		"building": "Spark Workstation",
 		"output": { "item": "Handy Spark", "quantity": 1 },
 		"numberOfItems": 3,
 		"inputs": [
@@ -701,7 +732,7 @@
 	{
 		"title": "Drilly Spark",
 		"itemsPerMinute": 0.938,
-		"building": "Spark Workshop",
+		"building": "Spark Workstation",
 		"output": { "item": "Drilly Spark", "quantity": 3 },
 		"numberOfItems": 3,
 		"inputs": [
@@ -725,7 +756,7 @@
 	{
 		"title": "Burning Spark",
 		"itemsPerMinute": 0.938,
-		"building": "Spark Workshop",
+		"building": "Spark Workstation",
 		"output": { "item": "Burning Spark", "quantity": 1 },
 		"numberOfItems": 3,
 		"inputs": [

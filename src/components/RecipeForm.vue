@@ -3,7 +3,7 @@
   import { ItemEnum } from '@/domain/Item'
   import { recipesPerKey } from '@/domain/RecipeFactory'
   import { getItemImage } from '@/utils/getImages'
-  const emit = defineEmits(['on-add-item'])
+  const emit = defineEmits(['on-add-item', 'reset'])
 
   const recipesValues = Object.values(recipesPerKey)
   const allRecipesItems = recipesValues.map(recipeValue => recipeValue.output.item)
@@ -13,6 +13,10 @@
     quantity: 2,
   })
 
+  function reset (payload: SubmitEvent) {
+    payload.preventDefault()
+    emit('reset')
+  }
   function submitItem (payload: SubmitEvent) {
     payload.preventDefault()
     emit('on-add-item', { ...formValues.value })
@@ -55,10 +59,21 @@
       variant="outlined"
     />
 
-    <v-btn prepend-icon="mdi-plus" type="submit" variant="tonal">
+    <v-btn prepend-icon="mdi-plus" size="large" type="submit" variant="tonal">
       Ajouter
     </v-btn>
   </form>
+
+  <v-btn prepend-icon="mdi-close" type="button" variant="tonal" @click="reset">
+    Reset
+  </v-btn>
 </template>
 
-<style scoped></style>
+<style scoped>
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+</style>

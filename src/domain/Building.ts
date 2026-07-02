@@ -12,7 +12,7 @@ export enum BuildingEnum {
   // Workstations - Assemblers
   Spark_Workbench = "Spark Workbench",
   Spark_Workstation = "Spark Workstation",
-  Spark_Workshop = "Spark Workshop",
+  Spark_Workshop = "Spark Workstation",
   Wood_Workshop = "Wood Workshop",
   Loom = "Loom",
   Stone_Workshop = "Stone Workshop",

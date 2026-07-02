@@ -130,6 +130,8 @@ export enum ItemEnum {
   Freezing_Spark = 'Freezing Spark',
 }
 
+export type SparkBuilder = ItemEnum.Stumpy_Spark | ItemEnum.Crafty_Spark | ItemEnum.Handy_Spark
+
 export type ItemAndQuantity = { item: ItemEnum, quantity: number }
 
 export class Item {

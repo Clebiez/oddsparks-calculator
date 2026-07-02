@@ -39,10 +39,11 @@ export class Recipe {
       }
     }
 
-    return output * quantity
+    // We suppose to always use 2 sparks
+    return output * quantity * 2
   }
 
-  getNumberOfRecipe (outputRate: number) {
-    return Math.ceil(outputRate / this.output.itemPerMinute)
+  getNumberOfRecipe (outputRate: number, builder: ItemEnum) {
+    return outputRate / this.getOutputRate(builder) / this.output.quantity
   }
 }

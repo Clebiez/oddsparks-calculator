@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import type { BuildingEnum } from '@/domain/Building'
   import { getBuildingImage } from '@/utils/getImages'
+  import { round } from '@/utils/round'
 
   type BuildingDetailProps = {
     building: BuildingEnum
@@ -11,8 +12,8 @@
 
 <template>
   <div class="building">
-    <v-img :src="getBuildingImage(building)" width="64" />
-    <p>{{ quantity }} x {{ building }}</p>
+    <v-img :src="getBuildingImage(building)" width="80" />
+    <p>{{ round(quantity) }} x {{ building }}</p>
   </div>
 </template>
 
