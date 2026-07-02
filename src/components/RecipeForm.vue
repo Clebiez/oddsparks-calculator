@@ -60,7 +60,7 @@
     />
 
     <v-btn prepend-icon="mdi-plus" size="large" type="submit" variant="tonal">
-      Ajouter
+      ADd
     </v-btn>
   </form>
 
