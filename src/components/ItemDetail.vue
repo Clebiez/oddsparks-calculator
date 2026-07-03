@@ -12,7 +12,7 @@
 </script>
 
 <template>
-  <div class="item">
+  <div class="flex flex-col items-center justify-center">
     <v-img :src="getItemImage(item)" width="64" />
     <p>{{ item }}</p>
     <p class="itemRate">({{ round(itemPerMinutes ?? 0, 2) }} items / min)</p>
@@ -20,12 +20,6 @@
 </template>
 
 <style scoped>
-  .item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
   .itemRate {
     font-size: 0.8rem;
   }

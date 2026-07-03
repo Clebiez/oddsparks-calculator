@@ -9,8 +9,7 @@
 		"preview": "vite preview",
 		"test:unit": "vitest",
 		"build-only": "vite build",
-		"type-check": "vue-tsc --build",
-		"crawl": "tsx src/crawler/main.ts"
+		"type-check": "vue-tsc --build"
 	},
 	"dependencies": {
 		"@fontsource/roboto": "^5.2.10",

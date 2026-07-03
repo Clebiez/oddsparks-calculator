@@ -8,14 +8,13 @@
     builder?: SparkBuilder
   }
   const { selectedItems, builder = ItemEnum.Crafty_Spark } = defineProps<RecipeResolverProps>()
-  console.log(builder)
 
 </script>
 
 <template>
   <ul>
     <li v-for="item in selectedItems" :key="item.item">
-      <RecipeDetail :builder="builder" :needed-items-per-min="recipesPerKey[item.item]?.getOutputRate(builder, item.quantity)" :recipe="recipesPerKey[item.item]" />
+      <RecipeDetail :builder="builder" :needed-items-per-min="recipesPerKey[item.item]?.[0]?.getOutputRate(builder, item.quantity)" :recipe="recipesPerKey[item.item]?.[0]" />
       <VDivider />
     </li>
   </ul>

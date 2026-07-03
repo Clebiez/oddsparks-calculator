@@ -11,17 +11,8 @@
 </script>
 
 <template>
-  <div class="building">
+  <div class="flex flex-col items-center justify-center">
     <v-img :src="getBuildingImage(building)" width="80" />
     <p>{{ round(quantity) }} x {{ building }}</p>
   </div>
 </template>
-
-<style scoped>
-  .building {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-</style>

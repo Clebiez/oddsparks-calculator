@@ -3,7 +3,7 @@ import type { ItemEnum } from './Item'
 import data from '../assets/data.json'
 import { Recipe } from './Recipe'
 
-export const recipesPerKey: Partial<Record<ItemEnum, Recipe>> = {}
+export const recipesPerKey: Partial<Record<ItemEnum, Recipe[]>> = {}
 
 for (const item of data) {
   const inputs = item.inputs.map(input => ({
@@ -11,10 +11,26 @@ for (const item of data) {
     quantity: input.quantity,
   }))
 
-  const output = {
-    item: item.output.item as ItemEnum,
-    quantity: item.output.quantity,
-    itemPerMinute: item.itemsPerMinute,
+  const outputs = item.output.map(output => ({
+    item: output.item as ItemEnum,
+    quantity: output.quantity,
+    itemsPerMinute: output.quantity * item.itemsPerMinute,
+  }))
+
+  for (const output of item.output) {
+    if (!recipesPerKey[output.item as ItemEnum]) {
+      recipesPerKey[output.item as ItemEnum] = []
+    }
+
+    recipesPerKey[output.item as ItemEnum]?.push(
+      new Recipe(
+        inputs,
+        outputs,
+        item.building as BuildingEnum,
+        item.itemsPerMinute,
+      ),
+    )
   }
-  recipesPerKey[item.title as ItemEnum] = new Recipe(inputs, output, item.building as BuildingEnum)
 }
+
+console.log(recipesPerKey)

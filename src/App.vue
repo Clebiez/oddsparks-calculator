@@ -6,21 +6,32 @@
           <v-app-bar-title>Oddspark Calculator</v-app-bar-title>
 
           <template #append>
-            <v-btn-toggle v-model="builder">
-              <v-btn v-for="item in allBuilder" :key="item" :value="item">
-                <img :src="getItemImage(item)" width="50">
-              </v-btn>
-            </v-btn-toggle>
 
             <v-btn href="https://github.com/Clebiez/oddspark-calculator" icon="mdi-github" rel="noopener noreferrer" target="_blank" />
           </template>
         </v-app-bar>
       </header>
 
-      <div class="m-4">
+      <div class="m-6 ">
         <RecipeForm @on-add-item="onAddItem" @reset="reset" />
-        <RecipeResolver :builder="builder" :selected-items="selectedItems" />
+
+        <div class="flex flex-row items-center justify-center gap-4">
+          <div>
+            <v-btn-toggle v-model="builder">
+              <v-btn v-for="item in allBuilder" :key="item" :value="item">
+                <img :src="getItemImage(item)" width="50">
+              </v-btn>
+            </v-btn-toggle>
+          </div>
+
+          <v-btn prepend-icon="mdi-close" type="button" variant="tonal" @click="reset">
+            Reset
+          </v-btn>
+
+        </div>
       </div>
+
+      <RecipeResolver :builder="builder" :selected-items="selectedItems" />
     </v-main>
 
     <v-footer class="d-flex flex-col align-center justify-center ga-2 flex-wrap grow py-3 max-h-30" color="surface-light">
@@ -54,6 +65,7 @@
 
   const allBuilder: SparkBuilder[] = [ItemEnum.Stumpy_Spark, ItemEnum.Crafty_Spark, ItemEnum.Handy_Spark]
   const builder: Ref<SparkBuilder> = ref(ItemEnum.Handy_Spark)
+
   function onAddItem (payload: ItemAndQuantity) {
     selectedItems.value.push(payload)
   }

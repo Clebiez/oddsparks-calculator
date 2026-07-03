@@ -7,29 +7,30 @@ export type ItemInput = {
 }
 
 export type ItemOutput = ItemInput & {
-  itemPerMinute: number
+  itemsPerMinute: number
 }
 
 export class Recipe {
   constructor (
     public inputs: ItemInput[],
-    public output: ItemOutput,
+    public outputs: ItemOutput[],
     public building: BuildingEnum,
+    public itemsPerMinute: number,
   ) {}
 
   getOutputRate (spark: ItemEnum, quantity = 1) {
     let output: number
     switch (spark) {
       case ItemEnum.Stumpy_Spark: {
-        output = this.output.itemPerMinute
+        output = this.itemsPerMinute
         break
       }
       case ItemEnum.Crafty_Spark: {
-        output = this.output.itemPerMinute * 1.5
+        output = this.itemsPerMinute * 1.5
         break
       }
       case ItemEnum.Handy_Spark: {
-        output = this.output.itemPerMinute * 2.5
+        output = this.itemsPerMinute * 2.5
         break
       }
 
@@ -44,6 +45,6 @@ export class Recipe {
   }
 
   getNumberOfRecipe (outputRate: number, builder: ItemEnum) {
-    return outputRate / this.getOutputRate(builder) / this.output.quantity
+    return outputRate / this.getOutputRate(builder) / this.outputs[0].quantity
   }
 }

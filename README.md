@@ -1,48 +1,54 @@
-# .
+# Oddspark Calculator
 
-This template should help get you started developing with Vue 3 in Vite.
+A Vue 3 + Vite project that helps calculate recipes and builders for the Oddspark game.
 
-## Recommended IDE Setup
+The app lets you select items and displays the required building setup and production rates. It uses Vuetify for UI components and pnpm for dependency management.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Features
 
-## Recommended Browser Setup
+- Interactive recipe selection
+- Builder selection with item images
+- Production speed calculation per selected items
+- Responsive UI built with Vuetify
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Project setup
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+Install dependencies:
 
 ```sh
 pnpm install
 ```
 
-### Compile and Hot-Reload for Development
+Start the development server:
 
 ```sh
 pnpm dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Build for production:
 
 ```sh
 pnpm build
 ```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## Deployment
 
-```sh
-pnpm test:unit
-```
+This project can be deployed to GitHub Pages. The current Vite config uses `base: '/oddspark-calculator/'` for the repository deployment path.
+
+## Scripts
+
+- `pnpm dev` - launch the local development server
+- `pnpm build` - compile and bundle the app for production
+- `pnpm preview` - locally preview the production build
+- `pnpm test:unit` - run unit tests with Vitest
+
+## Recommended setup
+
+- VS Code with [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+- Vue Devtools for browser debugging
+
+## Learn more
+
+- Vite: https://vite.dev/
+- Vue: https://vuejs.org/
+- Vuetify: https://vuetifyjs.com/

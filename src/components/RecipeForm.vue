@@ -3,20 +3,15 @@
   import { ItemEnum } from '@/domain/Item'
   import { recipesPerKey } from '@/domain/RecipeFactory'
   import { getItemImage } from '@/utils/getImages'
-  const emit = defineEmits(['on-add-item', 'reset'])
+  const emit = defineEmits(['on-add-item'])
 
-  const recipesValues = Object.values(recipesPerKey)
-  const allRecipesItems = recipesValues.map(recipeValue => recipeValue.output.item)
+  const recipesKey = Object.keys(recipesPerKey)
 
   const formValues = ref({
     item: ItemEnum.Stumpy_Spark,
     quantity: 2,
   })
 
-  function reset (payload: SubmitEvent) {
-    payload.preventDefault()
-    emit('reset')
-  }
   function submitItem (payload: SubmitEvent) {
     payload.preventDefault()
     emit('on-add-item', { ...formValues.value })
@@ -28,7 +23,7 @@
   <form @submit.prevent="submitItem">
     <v-autocomplete
       v-model="formValues.item"
-      :items="allRecipesItems"
+      :items="recipesKey"
       label="Choose an item"
       variant="outlined"
     >
@@ -36,7 +31,7 @@
         <v-list-item v-bind="props">
           <template #prepend>
             <v-avatar size="46">
-              <v-img :src="getItemImage(item)" />
+              <v-img :src="getItemImage(item as ItemEnum)" />
             </v-avatar>
           </template>
         </v-list-item>
@@ -64,9 +59,6 @@
     </v-btn>
   </form>
 
-  <v-btn prepend-icon="mdi-close" type="button" variant="tonal" @click="reset">
-    Reset
-  </v-btn>
 </template>
 
 <style scoped>

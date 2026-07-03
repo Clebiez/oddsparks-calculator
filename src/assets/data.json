@@ -1,768 +1,1652 @@
 [
-	{
-		"title": "Wooden Log",
-		"itemsPerMinute": 30,
-		"building": "Logger",
-		"output": { "item": "Wooden Log", "quantity": 1 },
-		"numberOfItems": 0,
-		"inputs": []
-	},
-	{
-		"title": "Leaves",
-		"itemsPerMinute": 30,
-		"building": "Logger",
-		"output": { "item": "Leaves", "quantity": 1 },
-		"numberOfItems": 0,
-		"inputs": []
-	},
-	{
-		"title": "Copper Ore",
-		"itemsPerMinute": 30,
-		"building": "Ore Miner",
-		"output": { "item": "Copper Ore", "quantity": 1 },
-		"numberOfItems": 0,
-		"inputs": []
-	},
-	{
-		"title": "Tree Bark",
-		"itemsPerMinute": 30,
-		"building": "Logger",
-		"output": { "item": "Tree Bark", "quantity": 1 },
-		"numberOfItems": 0,
-		"inputs": []
-	},
-	{
-		"title": "Stone",
-		"itemsPerMinute": 30,
-		"building": "Drill",
-		"output": { "item": "Stone", "quantity": 1 },
-		"numberOfItems": 0,
-		"inputs": []
-	},
-	
-	{
-		"title": "Quartz",
-		"itemsPerMinute": 30,
-		"building": "Drill",
-		"output": { "item": "Quartz", "quantity": 1 },
-		"numberOfItems": 0,
-		"inputs": []
-	},
-	{
-		"title": "Limestone",
-		"itemsPerMinute": 30,
-		"building": "Drill",
-		"output": { "item": "Limestone", "quantity": 1 },
-		"numberOfItems": 0,
-		"inputs": []
-	},
-	{
-		"title": "Coal",
-		"itemsPerMinute": 7.5,
-		"building": "Furnace",
-		"output": { "item": "Coal", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [{ "item": "Wooden Log", "quantity": 3 }]
-	},
-	{
-		"title": "Fabric",
-		"itemsPerMinute": 7.5,
-		"building": "Loom",
-		"output": { "item": "Fabric", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Tree Bark", "quantity": 4 },
-			{ "item": "Rope", "quantity": 2 }
-		]
-	},
-	{
-		"title": "Fertiliser",
-		"itemsPerMinute": 2.5,
-		"building": "Cutter",
-		"output": { "item": "Fertiliser", "quantity": 2 },
-		"numberOfItems": 1,
-		"inputs": [{ "item": "Leaves", "quantity": 4 }]
-	},
-	{
-		"title": "Ladder",
-		"itemsPerMinute": 1.875,
-		"building": "Wood Workshop",
-		"output": { "item": "Ladder", "quantity": 2 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Wooden Log", "quantity": 4 },
-			{ "item": "Sawn Timber", "quantity": 10 }
-		]
-	},
-	{
-		"title": "Sawn Timber",
-		"itemsPerMinute": 3.75,
-		"building": "Sawbench",
-		"output": { "item": "Sawn Timber", "quantity": 1 },
-		"numberOfItems": 1,
-		"inputs": [{ "item": "Wooden Log", "quantity": 2 }]
-	},
-	{
-		"title": "Wooden Panel",
-		"itemsPerMinute": 7.5,
-		"building": "Sawbench",
-		"output": { "item": "Wooden Panel", "quantity": 1 },
-		"numberOfItems": 1,
-		"inputs": [{ "item": "Sawn Timber", "quantity": 2 }]
-	},
-	{
-		"title": "Rope",
-		"itemsPerMinute": 3.75,
-		"building": "Loom",
-		"output": { "item": "Rope", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Leaves", "quantity": 2 },
-			{ "item": "Tree Bark", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Wooden Blade",
-		"itemsPerMinute": 1.25,
-		"building": "Wood Workshop",
-		"output": { "item": "Wooden Blade", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Sawn Timber", "quantity": 1 },
-			{ "item": "Wooden Panel", "quantity": 2 }
-		]
-	},
-	{
-		"title": "Big Vial",
-		"itemsPerMinute": 0.469,
-		"building": "Furnace",
-		"output": { "item": "Big Vial", "quantity": 2 },
-		"numberOfItems": 2,
-		"inputs": [{ "item": "Quartz", "quantity": 10 }]
-	},
-	{
-		"title": "Dowsing Stone",
-		"itemsPerMinute": 2.5,
-		"building": "Stone Workshop",
-		"output": { "item": "Dowsing Stone", "quantity": 3 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Quartz", "quantity": 1 },
-			{ "item": "Rope", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Explosives",
-		"itemsPerMinute": 2.5,
-		"building": "Wood Workshop",
-		"output": { "item": "Explosives", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Fertiliser", "quantity": 2 },
-			{ "item": "Limestone", "quantity": 4 }
-		]
-	},
-	{
-		"title": "Path Tile",
-		"itemsPerMinute": 1.875,
-		"building": "Stone Workshop",
-		"output": { "item": "Path Tile", "quantity": 5 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Pebble", "quantity": 10 },
-			{ "item": "Limestone", "quantity": 5 }
-		]
-	},
-	{
-		"title": "Small Vial",
-		"itemsPerMinute": 1.875,
-		"building": "Furnace",
-		"output": { "item": "Small Vial", "quantity": 2 },
-		"numberOfItems": 2,
-		"inputs": [{ "item": "Quartz", "quantity": 4 }]
-	},
-	{
-		"title": "Stone Plate",
-		"itemsPerMinute": 1.875,
-		"building": "Stonecutter",
-		"output": { "item": "Stone Plate", "quantity": 1 },
-		"numberOfItems": 1,
-		"inputs": [{ "item": "Stone", "quantity": 2 }]
-	},
-		{
-		"title": "Pebble",
-		"itemsPerMinute": 1.875,
-		"building": "Stonecutter",
-		"output": { "item": "Pebble", "quantity": 2 },
-		"numberOfItems": 1,
-		"inputs": [{ "item": "Stone", "quantity": 1 }]
-	},
-	{
-		"title": "Stone Spike",
-		"itemsPerMinute": 3.75,
-		"building": "Stone Workshop",
-		"output": { "item": "Stone Spike", "quantity": 4 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Wooden Blade", "quantity": 1 },
-			{ "item": "Stone Plate", "quantity": 4 }
-		]
-	},
-	{
-		"title": "Stone Wheel",
-		"itemsPerMinute": 3.75,
-		"building": "Stone Workshop",
-		"output": { "item": "Stone Wheel", "quantity": 2 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Path Tile", "quantity": 4 },
-			{ "item": "Stone Plate", "quantity": 2 }
-		]
-	},
-	{
-		"title": "Raw Aether",
-		"itemsPerMinute": 1.25,
-		"building": "Alchemy Lab",
-		"output": { "item": "Raw Aether", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Miasma Vial", "quantity": 2 },
-			{ "item": "Aether Shard", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Refined Aether",
-		"itemsPerMinute": 0.938,
-		"building": "Alchemy Lab",
-		"output": { "item": "Refined Aether", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Raw Aether", "quantity": 4 },
-			{ "item": "Big Vial", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Liquid Fertiliser",
-		"itemsPerMinute": 0.938,
-		"building": "Alchemy Lab",
-		"output": { "item": "Liquid Fertiliser", "quantity": 4 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Fireshroom Cluster", "quantity": 2 },
-			{ "item": "Stellar Leaves", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Miasma Vial",
-		"itemsPerMinute": 3.75,
-		"building": "Miasma Collector",
-		"output": { "item": "Miasma Vial", "quantity": 2 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Small Vial", "quantity": 2 },
-			{ "item": "Miasma", "quantity": 2 }
-		]
-	},
-	{
-		"title": "Aether Crystal",
-		"itemsPerMinute": 0.938,
-		"building": "Alchemy Lab",
-		"output": { "item": "Aether Crystal", "quantity": 3 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Aether Seed", "quantity": 1 },
-			{ "item": "Raw Aether", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Subsurface Aether",
-		"itemsPerMinute": 1,
-		"building": "Ancient Printer",
-		"output": { "item": "Subsurface Aether", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [{ "item": "Cleansing Fragment", "quantity": 0.6 }]
-	},
-	{
-		"title": "Copper Ingot",
-		"itemsPerMinute": 0.938,
-		"building": "Furnace",
-		"output": { "item": "Copper Ingot", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [{ "item": "Copper Ore", "quantity": 3 }]
-	},
-	{
-		"title": "Copper Ore",
-		"itemsPerMinute": 6,
-		"building": "Ore Miner",
-		"output": { "item": "Copper Ore", "quantity": 1 },
-		"numberOfItems": 0,
-		"inputs": []
-	},
-	{
-		"title": "Glowshroom",
-		"itemsPerMinute": 2.5,
-		"building": "Geode Breaker",
-		"output": { "item": "Glowshroom", "quantity": 10 },
-		"numberOfItems": 3,
-		"inputs": [
-			{ "item": "Bumpy Geode", "quantity": 1 },
-			{ "item": "Volcanic Soil", "quantity": 20 },
-			{ "item": "Coal", "quantity": 10 }
-		]
-	},
-	{
-		"title": "Lava Cap",
-		"itemsPerMinute": 0.938,
-		"building": "Plant Extractor",
-		"output": { "item": "Lava Cap", "quantity": 5 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Fireshroom Cluster", "quantity": 2 },
-			{ "item": "Glowshroom", "quantity": 5 }
-		]
-	},
-	{
-		"title": "Drill Bit",
-		"itemsPerMinute": 1.875,
-		"building": "Furnace",
-		"output": { "item": "Drill Bit", "quantity": 2 },
-		"numberOfItems": 2,
-		"inputs": [{ "item": "Copper Ingot", "quantity": 2 }]
-	},
-	{
-		"title": "Cracked Geode",
-		"itemsPerMinute": 2.5,
-		"building": "Geode Breaker",
-		"output": { "item": "Cracked Geode", "quantity": 10 },
-		"numberOfItems": 3,
-		"inputs": [
-			{ "item": "Geode Cluster", "quantity": 1 },
-			{ "item": "Bumpy Geode", "quantity": 10 },
-			{ "item": "Shiny Geode", "quantity": 10 }
-		]
-	},
-	{
-		"title": "Stellar Ice",
-		"itemsPerMinute": 3.75,
-		"building": "Sawbench",
-		"output": { "item": "Stellar Ice", "quantity": 3 },
-		"numberOfItems": 1,
-		"inputs": [{ "item": "Frozen Log", "quantity": 1 }]
-	},
-	{
-		"title": "Stellar Fertiliser",
-		"itemsPerMinute": 0.938,
-		"building": "Alchemy Lab",
-		"output": { "item": "Stellar Fertiliser", "quantity": 4 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Fertiliser", "quantity": 4 },
-			{ "item": "Stellar Leaves", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Leaf Knot",
-		"itemsPerMinute": 0.938,
-		"building": "Greenhouse",
-		"output": { "item": "Leaf Knot", "quantity": 10 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Leaves", "quantity": 4 },
-			{ "item": "Fertiliser", "quantity": 2 }
-		]
-	},
-	{
-		"title": "Coral Seed",
-		"itemsPerMinute": 1.875,
-		"building": "Greenhouse",
-		"output": { "item": "Coral Seed", "quantity": 20 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Coral", "quantity": 2 },
-			{ "item": "Fertiliser", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Stellar Leaves",
-		"itemsPerMinute": 0.938,
-		"building": "Greenhouse",
-		"output": { "item": "Stellar Leaves", "quantity": 20 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Stellar Seed", "quantity": 1 },
-			{ "item": "Volcanic Soil", "quantity": 2 }
-		]
-	},
-	{
-		"title": "Fireshroom Cluster",
-		"itemsPerMinute": 0.938,
-		"building": "Greenhouse",
-		"output": { "item": "Fireshroom Cluster", "quantity": 10 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Glowshroom", "quantity": 2 },
-			{ "item": "Stellar Fertiliser", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Copper Seed",
-		"itemsPerMinute": 0.682,
-		"building": "Greenhouse",
-		"output": { "item": "Copper Seed", "quantity": 20 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Copper Ore", "quantity": 2 },
-			{ "item": "Volcanic Soil", "quantity": 2 }
-		]
-	},
-	{
-		"title": "Aether Seed",
-		"itemsPerMinute": 0.938,
-		"building": "Plant Extractor",
-		"output": { "item": "Aether Seed", "quantity": 20 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Aether Flower", "quantity": 1 },
-			{ "item": "Aetheric Clump", "quantity": 6 }
-		]
-	},
-	{
-		"title": "Geode Cluster",
-		"itemsPerMinute": 0.469,
-		"building": "Arboretum",
-		"output": { "item": "Geode Cluster", "quantity": 5 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Lava Cap", "quantity": 1 },
-			{ "item": "Coral Seed", "quantity": 4 }
-		]
-	},
-	{
-		"title": "Copper Cutting",
-		"itemsPerMinute": 0.234,
-		"building": "Arboretum",
-		"output": { "item": "Copper Cutting", "quantity": 5 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Leaf Knot", "quantity": 2 },
-			{ "item": "Copper Seed", "quantity": 5 }
-		]
-	},
-	{
-		"title": "Aether Apple",
-		"itemsPerMinute": 0.234,
-		"building": "Arboretum",
-		"output": { "item": "Aether Apple", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Liquid Fertiliser", "quantity": 5 },
-			{ "item": "Aether Seed", "quantity": 5 }
-		]
-	},
-	{
-		"title": "Aether Segment",
-		"itemsPerMinute": 0.938,
-		"building": "Plant Extractor",
-		"output": { "item": "Aether Segment", "quantity": 20 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Aether Apple", "quantity": 1 },
-			{ "item": "Aether Seed", "quantity": 40 }
-		]
-	},
-	{
-		"title": "Stone Block",
-		"itemsPerMinute": 2.5,
-		"building": "Stone Workshop",
-		"output": { "item": "Stone Block", "quantity": 5 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Limestone", "quantity": 10 },
-			{ "item": "Stone Plate", "quantity": 10 }
-		]
-	},
-	{
-		"title": "Sponge",
-		"itemsPerMinute": 2.5,
-		"building": "Loom",
-		"output": { "item": "Sponge", "quantity": 3 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Tree Bark", "quantity": 5 },
-			{ "item": "Fabric", "quantity": 10 }
-		]
-	},
-	{
-		"title": "Corrupted Spark Token",
-		"itemsPerMinute": 1.25,
-		"building": "Aetheric Collider",
-		"output": { "item": "Scrubby Spark", "quantity": 1 },
-		"numberOfItems": 3,
-		"inputs": [
-			{ "item": "Corrupted Spark Token", "quantity": 1 },
-			{ "item": "Cleansing Fragment", "quantity": 2 },
-			{ "item": "Grey Aether", "quantity": 5 }
-		]
-	},
-	{
-		"title": "Red Paint",
-		"itemsPerMinute": 3.75,
-		"building": "Cutter",
-		"output": { "item": "Red Paint", "quantity": 1 },
-		"numberOfItems": 1,
-		"inputs": [{ "item": "Tree Bark", "quantity": 5 }]
-	},
-	{
-		"title": "Blue Paint",
-		"itemsPerMinute": 3.75,
-		"building": "Cutter",
-		"output": { "item": "Blue Paint", "quantity": 1 },
-		"numberOfItems": 1,
-		"inputs": [{ "item": "Quartz", "quantity": 5 }]
-	},
-	{
-		"title": "Yellow Paint",
-		"itemsPerMinute": 3.75,
-		"building": "Cutter",
-		"output": { "item": "Yellow Paint", "quantity": 1 },
-		"numberOfItems": 1,
-		"inputs": [{ "item": "Leaves", "quantity": 5 }]
-	},
-	{
-		"title": "Green Paint",
-		"itemsPerMinute": 3.75,
-		"building": "Stone Workshop",
-		"output": { "item": "Green Paint", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Blue Paint", "quantity": 1 },
-			{ "item": "Yellow Paint", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Black Paint",
-		"itemsPerMinute": 3.75,
-		"building": "Cutter",
-		"output": { "item": "Black Paint", "quantity": 1 },
-		"numberOfItems": 1,
-		"inputs": [{ "item": "Pebble", "quantity": 5 }]
-	},
-	{
-		"title": "White Paint",
-		"itemsPerMinute": 3.75,
-		"building": "Cutter",
-		"output": { "item": "White Paint", "quantity": 1 },
-		"numberOfItems": 1,
-		"inputs": [{ "item": "Limestone", "quantity": 5 }]
-	},
-	{
-		"title": "Orange Paint",
-		"itemsPerMinute": 3.75,
-		"building": "Stone Workshop",
-		"output": { "item": "Orange Paint", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Red Paint", "quantity": 1 },
-			{ "item": "Yellow Paint", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Purple Paint",
-		"itemsPerMinute": 3.75,
-		"building": "Stone Workshop",
-		"output": { "item": "Purple Paint", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Red Paint", "quantity": 1 },
-			{ "item": "Blue Paint", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Turpentine",
-		"itemsPerMinute": 3.75,
-		"building": "Cutter",
-		"output": { "item": "Turpentine", "quantity": 1 },
-		"numberOfItems": 1,
-		"inputs": [{ "item": "Wooden Log", "quantity": 5 }]
-	},
-	{
-		"title": "Stumpy Spark",
-		"itemsPerMinute": 1.875,
-		"building": "Spark Workstation",
-		"output": { "item": "Stumpy Spark", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Aether Shard", "quantity": 1 },
-			{ "item": "Wooden Log", "quantity": 5 }
-		]
-	},
-	{
-		"title": "Loamy Spark",
-		"itemsPerMinute": 1.875,
-		"building": "Spark Workbench",
-		"output": { "item": "Loamy Spark", "quantity": 5 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Aether Shard", "quantity": 5 },
-			{ "item": "Fertiliser", "quantity": 3 }
-		]
-	},
-	{
-		"title": "Choppy Spark",
-		"itemsPerMinute": 0.938,
-		"building": "Spark Workbench",
-		"output": { "item": "Choppy Spark", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Stumpy Spark", "quantity": 3 },
-			{ "item": "Wooden Blade", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Rocky Spark",
-		"itemsPerMinute": 1.875,
-		"building": "Spark Workstation",
-		"output": { "item": "Rocky Spark", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Stumpy Spark", "quantity": 2 },
-			{ "item": "Stone", "quantity": 5 }
-		]
-	},
-	{
-		"title": "Hauling Spark",
-		"itemsPerMinute": 0.938,
-		"building": "Spark Workstation",
-		"output": { "item": "Hauling Spark", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Carry Spark", "quantity": 2 },
-			{ "item": "Stone Wheel", "quantity": 4 }
-		]
-	},
-	{
-		"title": "Carry Spark",
-		"itemsPerMinute": 1.875,
-		"building": "Spark Workstation",
-		"output": { "item": "Carry Spark", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Crafty Spark", "quantity": 1 },
-			{ "item": "Sawn Timber", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Crafty Spark",
-		"itemsPerMinute": 1.25,
-		"building": "Spark Workstation",
-		"output": { "item": "Crafty Spark", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Stumpy Spark", "quantity": 2 },
-			{ "item": "Wooden Panel", "quantity": 2 }
-		]
-	},
-	{
-		"title": "Scouty Spark",
-		"itemsPerMinute": 1.875,
-		"building": "Spark Workstation",
-		"output": { "item": "Scouty Spark", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Stumpy Spark", "quantity": 1 },
-			{ "item": "Dowsing Stone", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Boomy Spark",
-		"itemsPerMinute": 1.25,
-		"building": "Spark Workstation",
-		"output": { "item": "Boomy Spark", "quantity": 3 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Rocky Spark", "quantity": 3 },
-			{ "item": "Explosives", "quantity": 5 }
-		]
-	},
-	{
-		"title": "Puffy Spark",
-		"itemsPerMinute": 1.875,
-		"building": "Spark Workstation",
-		"output": { "item": "Puffy Spark", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Rocky Spark", "quantity": 1 },
-			{ "item": "Fabric", "quantity": 4 }
-		]
-	},
-	{
-		"title": "Crashy Spark",
-		"itemsPerMinute": 0.938,
-		"building": "Spark Workstation",
-		"output": { "item": "Crashy Spark", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Boomy Spark", "quantity": 2 },
-			{ "item": "Stone Spike", "quantity": 7 }
-		]
-	},
-	{
-		"title": "Slashy Spark",
-		"itemsPerMinute": 0.938,
-		"building": "Spark Workstation",
-		"output": { "item": "Slashy Spark", "quantity": 1 },
-		"numberOfItems": 2,
-		"inputs": [
-			{ "item": "Rocky Spark", "quantity": 2 },
-			{ "item": "Choppy Spark", "quantity": 3 }
-		]
-	},
-	{
-		"title": "Handy Spark",
-		"itemsPerMinute": 0.938,
-		"building": "Spark Workstation",
-		"output": { "item": "Handy Spark", "quantity": 1 },
-		"numberOfItems": 3,
-		"inputs": [
-			{ "item": "Crafty Spark", "quantity": 5 },
-			{ "item": "Copper Ingot", "quantity": 4 },
-			{ "item": "Aether Crystal", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Drilly Spark",
-		"itemsPerMinute": 0.938,
-		"building": "Spark Workstation",
-		"output": { "item": "Drilly Spark", "quantity": 3 },
-		"numberOfItems": 3,
-		"inputs": [
-			{ "item": "Slashy Spark", "quantity": 6 },
-			{ "item": "Drill Bit", "quantity": 3 },
-			{ "item": "Aether Crystal", "quantity": 3 }
-		]
-	},
-	{
-		"title": "Scrubby Spark",
-		"itemsPerMinute": 0.469,
-		"building": "Spark Workstation",
-		"output": { "item": "Scrubby Spark", "quantity": 1 },
-		"numberOfItems": 3,
-		"inputs": [
-			{ "item": "Sponge", "quantity": 2 },
-			{ "item": "Copper Ingot", "quantity": 4 },
-			{ "item": "Aether Crystal", "quantity": 1 }
-		]
-	},
-	{
-		"title": "Burning Spark",
-		"itemsPerMinute": 0.938,
-		"building": "Spark Workstation",
-		"output": { "item": "Burning Spark", "quantity": 1 },
-		"numberOfItems": 3,
-		"inputs": [
-			{ "item": "Lava Cap", "quantity": 5 },
-			{ "item": "Copper Ingot", "quantity": 8 },
-			{ "item": "Aether Crystal", "quantity": 1 }
-		]
-	}
+  {
+    "title": "Wooden Log",
+    "itemsPerMinute": 30,
+    "building": "Logger",
+    "output": [
+      {
+        "item": "Wooden Log",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 0,
+    "inputs": []
+  },
+  {
+    "title": "Leaves",
+    "itemsPerMinute": 30,
+    "building": "Logger",
+    "output": [
+      {
+        "item": "Leaves",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 0,
+    "inputs": []
+  },
+  {
+    "title": "Copper Ore",
+    "itemsPerMinute": 30,
+    "building": "Ore Miner",
+    "output": [
+      {
+        "item": "Copper Ore",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 0,
+    "inputs": []
+  },
+  {
+    "title": "Tree Bark",
+    "itemsPerMinute": 30,
+    "building": "Logger",
+    "output": [
+      {
+        "item": "Tree Bark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 0,
+    "inputs": []
+  },
+  {
+    "title": "Stone",
+    "itemsPerMinute": 30,
+    "building": "Drill",
+    "output": [
+      {
+        "item": "Stone",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 0,
+    "inputs": []
+  },
+  {
+    "title": "Quartz",
+    "itemsPerMinute": 30,
+    "building": "Drill",
+    "output": [
+      {
+        "item": "Quartz",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 0,
+    "inputs": []
+  },
+  {
+    "title": "Limestone",
+    "itemsPerMinute": 30,
+    "building": "Drill",
+    "output": [
+      {
+        "item": "Limestone",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 0,
+    "inputs": []
+  },
+  {
+    "title": "Coaƒl",
+    "itemsPerMinute": 7.5,
+    "building": "Furnace",
+    "output": [
+      {
+        "item": "Coal",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Wooden Log",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "title": "Fabric",
+    "itemsPerMinute": 7.5,
+    "building": "Loom",
+    "output": [
+      {
+        "item": "Fabric",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Tree Bark",
+        "quantity": 4
+      },
+      {
+        "item": "Rope",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "title": "Fertiliser",
+    "itemsPerMinute": 2.5,
+    "building": "Cutter",
+    "output": [
+      {
+        "item": "Fertiliser",
+        "quantity": 2
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Leaves",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "title": "Fertiliser Enrichment",
+    "itemsPerMinute": 2.5,
+    "building": "Wood Workshop",
+    "output": [
+      {
+        "item": "Fertiliser",
+        "quantity": 4
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Fertiliser",
+        "quantity": 2
+      },
+      {
+        "item": "Stellar Ice",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "title": "Ladder",
+    "itemsPerMinute": 1.875,
+    "building": "Wood Workshop",
+    "output": [
+      {
+        "item": "Ladder",
+        "quantity": 2
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Wooden Log",
+        "quantity": 4
+      },
+      {
+        "item": "Sawn Timber",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "title": "Sawn Timber",
+    "itemsPerMinute": 3.75,
+    "building": "Sawbench",
+    "output": [
+      {
+        "item": "Sawn Timber",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Wooden Log",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "title": "Wooden Panel",
+    "itemsPerMinute": 7.5,
+    "building": "Sawbench",
+    "output": [
+      {
+        "item": "Wooden Panel",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Sawn Timber",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "title": "Rope",
+    "itemsPerMinute": 3.75,
+    "building": "Loom",
+    "output": [
+      {
+        "item": "Rope",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Leaves",
+        "quantity": 2
+      },
+      {
+        "item": "Tree Bark",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Wooden Blade",
+    "itemsPerMinute": 1.25,
+    "building": "Wood Workshop",
+    "output": [
+      {
+        "item": "Wooden Blade",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Sawn Timber",
+        "quantity": 1
+      },
+      {
+        "item": "Wooden Panel",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "title": "Big Vial",
+    "itemsPerMinute": 0.469,
+    "building": "Furnace",
+    "output": [
+      {
+        "item": "Big Vial",
+        "quantity": 2
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Quartz",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "title": "Dowsing Stone",
+    "itemsPerMinute": 2.5,
+    "building": "Stone Workshop",
+    "output": [
+      {
+        "item": "Dowsing Stone",
+        "quantity": 3
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Quartz",
+        "quantity": 1
+      },
+      {
+        "item": "Rope",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Explosives",
+    "itemsPerMinute": 2.5,
+    "building": "Wood Workshop",
+    "output": [
+      {
+        "item": "Explosives",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Fertiliser",
+        "quantity": 2
+      },
+      {
+        "item": "Limestone",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "title": "Path Tile",
+    "itemsPerMinute": 1.875,
+    "building": "Stone Workshop",
+    "output": [
+      {
+        "item": "Path Tile",
+        "quantity": 5
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Pebble",
+        "quantity": 10
+      },
+      {
+        "item": "Limestone",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "title": "Small Vial",
+    "itemsPerMinute": 1.875,
+    "building": "Furnace",
+    "output": [
+      {
+        "item": "Small Vial",
+        "quantity": 2
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Quartz",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "title": "Stone Plate",
+    "itemsPerMinute": 1.875,
+    "building": "Stonecutter",
+    "output": [
+      {
+        "item": "Stone Plate",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Stone",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "title": "Pebble",
+    "itemsPerMinute": 1.875,
+    "building": "Stonecutter",
+    "output": [
+      {
+        "item": "Pebble",
+        "quantity": 2
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Stone",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Stone Spike",
+    "itemsPerMinute": 3.75,
+    "building": "Stone Workshop",
+    "output": [
+      {
+        "item": "Stone Spike",
+        "quantity": 4
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Wooden Blade",
+        "quantity": 1
+      },
+      {
+        "item": "Stone Plate",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "title": "Stone Wheel",
+    "itemsPerMinute": 3.75,
+    "building": "Stone Workshop",
+    "output": [
+      {
+        "item": "Stone Wheel",
+        "quantity": 2
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Path Tile",
+        "quantity": 4
+      },
+      {
+        "item": "Stone Plate",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "title": "Raw Aether",
+    "itemsPerMinute": 1.25,
+    "building": "Alchemy Lab",
+    "output": [
+      {
+        "item": "Raw Aether",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Miasma Vial",
+        "quantity": 2
+      },
+      {
+        "item": "Aether Shard",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Refined Aether",
+    "itemsPerMinute": 0.938,
+    "building": "Alchemy Lab",
+    "output": [
+      {
+        "item": "Refined Aether",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Raw Aether",
+        "quantity": 4
+      },
+      {
+        "item": "Big Vial",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Liquid Fertiliser",
+    "itemsPerMinute": 0.938,
+    "building": "Alchemy Lab",
+    "output": [
+      {
+        "item": "Liquid Fertiliser",
+        "quantity": 4
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Fireshroom Cluster",
+        "quantity": 2
+      },
+      {
+        "item": "Stellar Leaves",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Miasma Vial",
+    "itemsPerMinute": 3.75,
+    "building": "Miasma Collector",
+    "output": [
+      {
+        "item": "Miasma Vial",
+        "quantity": 2
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Small Vial",
+        "quantity": 2
+      },
+      {
+        "item": "Miasma",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "title": "Aether Crystal",
+    "itemsPerMinute": 0.938,
+    "building": "Alchemy Lab",
+    "output": [
+      {
+        "item": "Aether Crystal",
+        "quantity": 3
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Aether Seed",
+        "quantity": 1
+      },
+      {
+        "item": "Raw Aether",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Subsurface Aether",
+    "itemsPerMinute": 1,
+    "building": "Ancient Printer",
+    "output": [
+      {
+        "item": "Subsurface Aether",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Cleansing Fragment",
+        "quantity": 0.6
+      }
+    ]
+  },
+  {
+    "title": "Copper Ingot",
+    "itemsPerMinute": 0.938,
+    "building": "Furnace",
+    "output": [
+      {
+        "item": "Copper Ingot",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Copper Ore",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "title": "Copper Ore",
+    "itemsPerMinute": 6,
+    "building": "Ore Miner",
+    "output": [
+      {
+        "item": "Copper Ore",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 0,
+    "inputs": []
+  },
+  {
+    "title": "Glowshroom",
+    "itemsPerMinute": 2.5,
+    "building": "Geode Breaker",
+    "output": [
+      {
+        "item": "Glowshroom",
+        "quantity": 10
+      }
+    ],
+    "numberOfItems": 3,
+    "inputs": [
+      {
+        "item": "Bumpy Geode",
+        "quantity": 1
+      },
+      {
+        "item": "Volcanic Soil",
+        "quantity": 20
+      },
+      {
+        "item": "Coal",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "title": "Lava Cap",
+    "itemsPerMinute": 0.938,
+    "building": "Plant Extractor",
+    "output": [
+      {
+        "item": "Lava Cap",
+        "quantity": 5
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Fireshroom Cluster",
+        "quantity": 2
+      },
+      {
+        "item": "Glowshroom",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "title": "Drill Bit",
+    "itemsPerMinute": 1.875,
+    "building": "Furnace",
+    "output": [
+      {
+        "item": "Drill Bit",
+        "quantity": 2
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Copper Ingot",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "title": "Cracked Geode",
+    "itemsPerMinute": 2.5,
+    "building": "Geode Breaker",
+    "output": [
+      {
+        "item": "Cracked Geode",
+        "quantity": 10
+      }
+    ],
+    "numberOfItems": 3,
+    "inputs": [
+      {
+        "item": "Geode Cluster",
+        "quantity": 1
+      },
+      {
+        "item": "Bumpy Geode",
+        "quantity": 10
+      },
+      {
+        "item": "Shiny Geode",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "title": "Frozen Log Cutting",
+    "itemsPerMinute": 3.75,
+    "building": "Sawbench",
+    "output": [
+      {
+        "item": "Stellar Ice",
+        "quantity": 3
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Frozen Log",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Frozen Stone Cutting",
+    "itemsPerMinute": 1.875,
+    "building": "Stonecutter",
+    "output": [
+      {
+        "item": "Stellar Ice",
+        "quantity": 6
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Frozen Stone",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "title": "Stellar Fertiliser",
+    "itemsPerMinute": 0.938,
+    "building": "Alchemy Lab",
+    "output": [
+      {
+        "item": "Stellar Fertiliser",
+        "quantity": 4
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Fertiliser",
+        "quantity": 4
+      },
+      {
+        "item": "Stellar Leaves",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Leaf Knot",
+    "itemsPerMinute": 0.938,
+    "building": "Greenhouse",
+    "output": [
+      {
+        "item": "Leaf Knot",
+        "quantity": 10
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Leaves",
+        "quantity": 4
+      },
+      {
+        "item": "Fertiliser",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "title": "Coral Seed",
+    "itemsPerMinute": 1.875,
+    "building": "Greenhouse",
+    "output": [
+      {
+        "item": "Coral Seed",
+        "quantity": 20
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Coral",
+        "quantity": 2
+      },
+      {
+        "item": "Fertiliser",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Stellar Leaves",
+    "itemsPerMinute": 0.938,
+    "building": "Greenhouse",
+    "output": [
+      {
+        "item": "Stellar Leaves",
+        "quantity": 20
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Stellar Seed",
+        "quantity": 1
+      },
+      {
+        "item": "Volcanic Soil",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "title": "Fireshroom Cluster",
+    "itemsPerMinute": 0.938,
+    "building": "Greenhouse",
+    "output": [
+      {
+        "item": "Fireshroom Cluster",
+        "quantity": 10
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Glowshroom",
+        "quantity": 2
+      },
+      {
+        "item": "Stellar Fertiliser",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Copper Seed",
+    "itemsPerMinute": 0.682,
+    "building": "Greenhouse",
+    "output": [
+      {
+        "item": "Copper Seed",
+        "quantity": 20
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Copper Ore",
+        "quantity": 2
+      },
+      {
+        "item": "Volcanic Soil",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "title": "Aether Seed",
+    "itemsPerMinute": 0.938,
+    "building": "Plant Extractor",
+    "output": [
+      {
+        "item": "Aether Seed",
+        "quantity": 20
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Aether Flower",
+        "quantity": 1
+      },
+      {
+        "item": "Aetheric Clump",
+        "quantity": 6
+      }
+    ]
+  },
+  {
+    "title": "Geode Cluster",
+    "itemsPerMinute": 0.469,
+    "building": "Arboretum",
+    "output": [
+      {
+        "item": "Geode Cluster",
+        "quantity": 5
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Lava Cap",
+        "quantity": 1
+      },
+      {
+        "item": "Coral Seed",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "title": "Copper Cutting",
+    "itemsPerMinute": 0.234,
+    "building": "Arboretum",
+    "output": [
+      {
+        "item": "Copper Cutting",
+        "quantity": 5
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Leaf Knot",
+        "quantity": 2
+      },
+      {
+        "item": "Copper Seed",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "title": "Aether Apple",
+    "itemsPerMinute": 0.234,
+    "building": "Arboretum",
+    "output": [
+      {
+        "item": "Aether Apple",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Liquid Fertiliser",
+        "quantity": 5
+      },
+      {
+        "item": "Aether Seed",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "title": "Aether Segment",
+    "itemsPerMinute": 0.938,
+    "building": "Plant Extractor",
+    "output": [
+      {
+        "item": "Aether Segment",
+        "quantity": 20
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Aether Apple",
+        "quantity": 1
+      },
+      {
+        "item": "Aether Seed",
+        "quantity": 40
+      }
+    ]
+  },
+  {
+    "title": "Stone Block",
+    "itemsPerMinute": 2.5,
+    "building": "Stone Workshop",
+    "output": [
+      {
+        "item": "Stone Block",
+        "quantity": 5
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Limestone",
+        "quantity": 10
+      },
+      {
+        "item": "Stone Plate",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "title": "Sponge",
+    "itemsPerMinute": 2.5,
+    "building": "Loom",
+    "output": [
+      {
+        "item": "Sponge",
+        "quantity": 3
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Tree Bark",
+        "quantity": 5
+      },
+      {
+        "item": "Fabric",
+        "quantity": 10
+      }
+    ]
+  },
+  {
+    "title": "Corrupted Spark Token",
+    "itemsPerMinute": 1.25,
+    "building": "Aetheric Collider",
+    "output": [
+      {
+        "item": "Scrubby Spark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 3,
+    "inputs": [
+      {
+        "item": "Corrupted Spark Token",
+        "quantity": 1
+      },
+      {
+        "item": "Cleansing Fragment",
+        "quantity": 2
+      },
+      {
+        "item": "Grey Aether",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "title": "Red Paint",
+    "itemsPerMinute": 3.75,
+    "building": "Cutter",
+    "output": [
+      {
+        "item": "Red Paint",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Tree Bark",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "title": "Blue Paint",
+    "itemsPerMinute": 3.75,
+    "building": "Cutter",
+    "output": [
+      {
+        "item": "Blue Paint",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Quartz",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "title": "Yellow Paint",
+    "itemsPerMinute": 3.75,
+    "building": "Cutter",
+    "output": [
+      {
+        "item": "Yellow Paint",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Leaves",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "title": "Green Paint",
+    "itemsPerMinute": 3.75,
+    "building": "Stone Workshop",
+    "output": [
+      {
+        "item": "Green Paint",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Blue Paint",
+        "quantity": 1
+      },
+      {
+        "item": "Yellow Paint",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Black Paint",
+    "itemsPerMinute": 3.75,
+    "building": "Cutter",
+    "output": [
+      {
+        "item": "Black Paint",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Pebble",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "title": "White Paint",
+    "itemsPerMinute": 3.75,
+    "building": "Cutter",
+    "output": [
+      {
+        "item": "White Paint",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Limestone",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "title": "Orange Paint",
+    "itemsPerMinute": 3.75,
+    "building": "Stone Workshop",
+    "output": [
+      {
+        "item": "Orange Paint",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Red Paint",
+        "quantity": 1
+      },
+      {
+        "item": "Yellow Paint",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Purple Paint",
+    "itemsPerMinute": 3.75,
+    "building": "Stone Workshop",
+    "output": [
+      {
+        "item": "Purple Paint",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Red Paint",
+        "quantity": 1
+      },
+      {
+        "item": "Blue Paint",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Turpentine",
+    "itemsPerMinute": 3.75,
+    "building": "Cutter",
+    "output": [
+      {
+        "item": "Turpentine",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Wooden Log",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "title": "Stumpy Spark",
+    "itemsPerMinute": 1.875,
+    "building": "Spark Workstation",
+    "output": [
+      {
+        "item": "Stumpy Spark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Aether Shard",
+        "quantity": 1
+      },
+      {
+        "item": "Wooden Log",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "title": "Loamy Spark",
+    "itemsPerMinute": 1.875,
+    "building": "Spark Workbench",
+    "output": [
+      {
+        "item": "Loamy Spark",
+        "quantity": 5
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Aether Shard",
+        "quantity": 5
+      },
+      {
+        "item": "Fertiliser",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "title": "Choppy Spark",
+    "itemsPerMinute": 0.938,
+    "building": "Spark Workbench",
+    "output": [
+      {
+        "item": "Choppy Spark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Stumpy Spark",
+        "quantity": 3
+      },
+      {
+        "item": "Wooden Blade",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Rocky Spark",
+    "itemsPerMinute": 1.875,
+    "building": "Spark Workstation",
+    "output": [
+      {
+        "item": "Rocky Spark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Stumpy Spark",
+        "quantity": 2
+      },
+      {
+        "item": "Stone",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "title": "Hauling Spark",
+    "itemsPerMinute": 0.938,
+    "building": "Spark Workstation",
+    "output": [
+      {
+        "item": "Hauling Spark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Carry Spark",
+        "quantity": 2
+      },
+      {
+        "item": "Stone Wheel",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "title": "Carry Spark",
+    "itemsPerMinute": 1.875,
+    "building": "Spark Workstation",
+    "output": [
+      {
+        "item": "Carry Spark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Crafty Spark",
+        "quantity": 1
+      },
+      {
+        "item": "Sawn Timber",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Crafty Spark",
+    "itemsPerMinute": 1.25,
+    "building": "Spark Workstation",
+    "output": [
+      {
+        "item": "Crafty Spark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Stumpy Spark",
+        "quantity": 2
+      },
+      {
+        "item": "Wooden Panel",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "title": "Scouty Spark",
+    "itemsPerMinute": 1.875,
+    "building": "Spark Workstation",
+    "output": [
+      {
+        "item": "Scouty Spark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Stumpy Spark",
+        "quantity": 1
+      },
+      {
+        "item": "Dowsing Stone",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Boomy Spark",
+    "itemsPerMinute": 1.25,
+    "building": "Spark Workstation",
+    "output": [
+      {
+        "item": "Boomy Spark",
+        "quantity": 3
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Rocky Spark",
+        "quantity": 3
+      },
+      {
+        "item": "Explosives",
+        "quantity": 5
+      }
+    ]
+  },
+  {
+    "title": "Puffy Spark",
+    "itemsPerMinute": 1.875,
+    "building": "Spark Workstation",
+    "output": [
+      {
+        "item": "Puffy Spark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Rocky Spark",
+        "quantity": 1
+      },
+      {
+        "item": "Fabric",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "title": "Crashy Spark",
+    "itemsPerMinute": 0.938,
+    "building": "Spark Workstation",
+    "output": [
+      {
+        "item": "Crashy Spark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Boomy Spark",
+        "quantity": 2
+      },
+      {
+        "item": "Stone Spike",
+        "quantity": 7
+      }
+    ]
+  },
+  {
+    "title": "Slashy Spark",
+    "itemsPerMinute": 0.938,
+    "building": "Spark Workstation",
+    "output": [
+      {
+        "item": "Slashy Spark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 2,
+    "inputs": [
+      {
+        "item": "Rocky Spark",
+        "quantity": 2
+      },
+      {
+        "item": "Choppy Spark",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "title": "Handy Spark",
+    "itemsPerMinute": 0.938,
+    "building": "Spark Workstation",
+    "output": [
+      {
+        "item": "Handy Spark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 3,
+    "inputs": [
+      {
+        "item": "Crafty Spark",
+        "quantity": 5
+      },
+      {
+        "item": "Copper Ingot",
+        "quantity": 4
+      },
+      {
+        "item": "Aether Crystal",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Drilly Spark",
+    "itemsPerMinute": 0.938,
+    "building": "Spark Workstation",
+    "output": [
+      {
+        "item": "Drilly Spark",
+        "quantity": 3
+      }
+    ],
+    "numberOfItems": 3,
+    "inputs": [
+      {
+        "item": "Slashy Spark",
+        "quantity": 6
+      },
+      {
+        "item": "Drill Bit",
+        "quantity": 3
+      },
+      {
+        "item": "Aether Crystal",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "title": "Scrubby Spark",
+    "itemsPerMinute": 0.469,
+    "building": "Spark Workstation",
+    "output": [
+      {
+        "item": "Scrubby Spark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 3,
+    "inputs": [
+      {
+        "item": "Sponge",
+        "quantity": 2
+      },
+      {
+        "item": "Copper Ingot",
+        "quantity": 4
+      },
+      {
+        "item": "Aether Crystal",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Burning Spark",
+    "itemsPerMinute": 0.938,
+    "building": "Spark Workstation",
+    "output": [
+      {
+        "item": "Burning Spark",
+        "quantity": 1
+      }
+    ],
+    "numberOfItems": 3,
+    "inputs": [
+      {
+        "item": "Lava Cap",
+        "quantity": 5
+      },
+      {
+        "item": "Copper Ingot",
+        "quantity": 8
+      },
+      {
+        "item": "Aether Crystal",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Pellet Refining",
+    "itemsPerMinute": 1.25,
+    "building": "Aetheric Distiller",
+    "output": [
+      {
+        "item": "Aether Shard",
+        "quantity": 6
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Aetheric Pellet",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Raw Distillation",
+    "itemsPerMinute": 1.25,
+    "building": "Aetheric Distiller",
+    "output": [
+      {
+        "item": "Aether Shard",
+        "quantity": 6
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Raw Aether",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Clump Dividing",
+    "itemsPerMinute": 0.469,
+    "building": "Aetheric Distiller",
+    "output": [
+      {
+        "item": "Aetheric Pellet",
+        "quantity": 6
+      }
+    ],
+    "numberOfItems": 1,
+    "inputs": [
+      {
+        "item": "Aetheric Clump",
+        "quantity": 1
+      }
+    ]
+  }
 ]
