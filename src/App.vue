@@ -3,11 +3,11 @@
     <v-main>
       <header>
         <v-app-bar :elevation="3">
-          <v-app-bar-title>Oddspark Calculator</v-app-bar-title>
+          <v-app-bar-title>Oddsparks Calculator</v-app-bar-title>
 
           <template #append>
 
-            <v-btn href="https://github.com/Clebiez/oddspark-calculator" icon="mdi-github" rel="noopener noreferrer" target="_blank" />
+            <v-btn href="https://github.com/Clebiez/oddsparks-calculator" icon="mdi-github" rel="noopener noreferrer" target="_blank" />
           </template>
         </v-app-bar>
       </header>
