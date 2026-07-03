@@ -15,6 +15,8 @@
 
   const isCollapsed = ref(true)
 
+  const shouldBeCollapsable = !!recipe?.inputs.find(input => !!recipesPerKey[input.item])
+
   const quantity = recipe?.getNumberOfRecipe(neededItemsPerMin, builder) ?? 0
 </script>
 
@@ -33,7 +35,7 @@
         </li>
       </ul>
 
-      <v-btn v-if="recipe.inputs.length > 0" :icon="isCollapsed ? 'mdi-menu-up' : 'mdi-menu-down'" @click="isCollapsed = !isCollapsed" />
+      <v-btn v-if="shouldBeCollapsable" :icon="isCollapsed ? 'mdi-menu-up' : 'mdi-menu-down'" @click="isCollapsed = !isCollapsed" />
     </div>
 
     <v-expand-transition>
