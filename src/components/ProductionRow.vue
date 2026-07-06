@@ -2,23 +2,24 @@
   <!-- Main row -->
   <tr class="production-row" :class="`depth-${depth}`">
     <td>
-      <div class="align-center" :style="{ paddingLeft: `${depth * 24}px` }">
+      <div class="flex items-center ga-2" :style="{ paddingLeft: `${depth * 24}px` }">
+
         <v-btn
           v-if="hasChildren"
-          density="compact"
           :icon="expanded ? 'mdi-chevron-down' : 'mdi-chevron-right'"
           size="x-small"
           variant="text"
           @click="expanded = !expanded"
         />
 
-        <span v-else-if="depth > 0" class="depth-indicator" />
+        <span v-else-if="depth > 0" class="depth-indicator mr-5 ml-4" />
 
         <v-avatar color="surface-variant" rounded="lg" size="32">
           <v-img :src="getItemImage(outputItem)" />
         </v-avatar>
 
         <span class="text-body-1">{{ outputItem }}</span>
+
       </div>
     </td>
 
@@ -27,7 +28,7 @@
     </td>
 
     <td>
-      <div v-if="recipe" class="d-flex align-center ga-2">
+      <div v-if="recipe" class="flex items-center gap-2">
         <v-avatar color="surface-variant" rounded="lg" size="32">
           <v-img :src="getBuildingImage(recipe.building)" />
         </v-avatar>
@@ -44,11 +45,18 @@
       <v-btn
         v-if="depth === 0"
         color="error"
-        density="compact"
         icon="mdi-close"
         size="x-small"
         variant="text"
         @click="$emit('remove')"
+      />
+
+      <v-btn
+        v-if="hasMultipleRecipes"
+        icon="mdi-swap-horizontal"
+        size="x-small"
+        variant="text"
+        @click="dialogOpen = true"
       />
     </td>
   </tr>
@@ -57,13 +65,55 @@
   <template v-if="hasChildren && expanded">
     <ProductionRow
       v-for="input in recipe!.inputs"
-      :key="`${input.item}-${depth}`"
+      :key="`${input.item}-${depth}-${recipeIndex}`"
       :builder="builder"
       :depth="depth + 1"
       :item="{ item: input.item, quantity: inputRate(input) }"
       :rate-override="inputRate(input)"
     />
   </template>
+
+  <!-- Recipe selection dialog -->
+  <v-dialog v-model="dialogOpen" max-width="440">
+    <v-card>
+      <v-card-title class="d-flex align-center ga-2">
+        <v-avatar color="surface-variant" rounded="lg" size="28">
+          <v-img :src="getItemImage(outputItem)" />
+        </v-avatar>
+        {{ outputItem }} — Choose recipe
+      </v-card-title>
+
+      <v-card-text class="pa-0">
+        <v-list>
+          <v-list-item
+            v-for="(r, i) in allRecipes"
+            :key="i"
+            :active="i === recipeIndex"
+            class="py-3"
+            @click="selectRecipe(i)"
+          >
+            <template #prepend>
+              <v-avatar color="surface-variant" rounded="lg" size="32">
+                <v-img :src="getItemImage(r.outputs[0].item)" />
+              </v-avatar>
+            </template>
+
+            <v-list-item-title class="text-body-1">{{ r.outputs[0].item }}</v-list-item-title>
+
+            <v-list-item-subtitle class="text-body-2">
+              <div v-for="(input, j) in r.inputs" :key="j">
+                <v-avatar color="surface-variant" rounded="lg" size="32">
+                  <v-img :src="getItemImage(input.item)" />
+                </v-avatar>
+
+                <span>{{ input.quantity }}× {{ input.item }}<span v-if="j < r.inputs.length - 1">, </span>
+                </span></div>
+            </v-list-item-subtitle>
+          </v-list-item>
+        </v-list>
+      </v-card-text>
+    </v-card>
+  </v-dialog>
 </template>
 
 <script lang="ts" setup>
@@ -85,10 +135,14 @@
   defineEmits(['remove'])
 
   const expanded = ref(true)
+  const recipeIndex = ref(0)
+  const dialogOpen = ref(false)
 
   const outputItem = computed(() => props.item.item)
 
-  const recipe = computed(() => recipesPerKey[props.item.item]?.[0])
+  const allRecipes = computed(() => recipesPerKey[props.item.item] ?? [])
+  const hasMultipleRecipes = computed(() => allRecipes.value.length > 1)
+  const recipe = computed(() => allRecipes.value[recipeIndex.value] ?? null)
 
   const hasChildren = computed(() => recipe.value && recipe.value.inputs.length > 0)
 
@@ -106,6 +160,11 @@
   function inputRate (input: ItemInput): number {
     if (!recipe.value) return 0
     return input.quantity * outputRate.value / recipe.value.outputs[0].quantity
+  }
+
+  function selectRecipe (index: number) {
+    recipeIndex.value = index
+    dialogOpen.value = false
   }
 </script>
 

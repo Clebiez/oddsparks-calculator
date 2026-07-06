@@ -8,7 +8,7 @@
           <th class="text-left">Building</th>
           <th class="text-center">Count</th>
 
-          <th class="text-right" style="width: 40px;">
+          <th class="text-center" style="width: 40px;">
             <v-btn
               color="error"
               density="compact"
