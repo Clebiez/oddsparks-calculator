@@ -2,8 +2,7 @@
   <!-- Main row -->
   <tr class="production-row" :class="`depth-${depth}`">
     <td>
-      <div class="flex items-center ga-2" :style="{ paddingLeft: `${depth * 24}px` }">
-
+      <div class="d-flex align-center ga-2" :style="{ paddingLeft: `${depth * 24}px` }">
         <v-btn
           v-if="hasChildren"
           :icon="expanded ? 'mdi-chevron-down' : 'mdi-chevron-right'"
@@ -20,6 +19,16 @@
 
         <span class="text-body-1">{{ outputItem }}</span>
 
+        <v-chip
+          v-if="isCycle"
+          color="warning"
+          density="compact"
+          prepend-icon="mdi-refresh"
+          size="x-small"
+          variant="tonal"
+        >
+          loop
+        </v-chip>
       </div>
     </td>
 
@@ -28,7 +37,7 @@
     </td>
 
     <td>
-      <div v-if="recipe" class="flex items-center gap-2">
+      <div v-if="recipe && !isCycle" class="d-flex align-center ga-2">
         <v-avatar color="surface-variant" rounded="lg" size="32">
           <v-img :src="getBuildingImage(recipe.building)" />
         </v-avatar>
@@ -38,7 +47,7 @@
     </td>
 
     <td class="text-center">
-      <span v-if="recipe && buildingCount > 0" class="text-body-1 font-weight-medium">{{ round(buildingCount, 1) }}</span>
+      <span v-if="recipe && !isCycle && buildingCount > 0" class="text-body-1 font-weight-medium">{{ round(buildingCount, 1) }}</span>
     </td>
 
     <td class="text-right" style="width: 40px;">
@@ -52,7 +61,7 @@
       />
 
       <v-btn
-        v-if="hasMultipleRecipes"
+        v-if="hasMultipleRecipes && !isCycle"
         icon="mdi-swap-horizontal"
         size="x-small"
         variant="text"
@@ -61,11 +70,12 @@
     </td>
   </tr>
 
-  <!-- Sub-recipe rows (inputs) — collapsible -->
-  <template v-if="hasChildren && expanded">
+  <!-- Sub-recipe rows (inputs) — collapsible, skip if cycle -->
+  <template v-if="hasChildren && expanded && !isCycle">
     <ProductionRow
       v-for="input in recipe!.inputs"
       :key="`${input.item}-${depth}-${recipeIndex}`"
+      :ancestors="currentAncestors"
       :builder="builder"
       :depth="depth + 1"
       :item="{ item: input.item, quantity: inputRate(input) }"
@@ -107,7 +117,8 @@
                 </v-avatar>
 
                 <span>{{ input.quantity }}× {{ input.item }}<span v-if="j < r.inputs.length - 1">, </span>
-                </span></div>
+                </span>
+              </div>
             </v-list-item-subtitle>
           </v-list-item>
         </v-list>
@@ -117,20 +128,23 @@
 </template>
 
 <script lang="ts" setup>
-  import type { ItemAndQuantity, SparkBuilder } from '@/domain/Item'
+  import type { ItemAndQuantity, ItemEnum, SparkBuilder } from '@/domain/Item'
   import type { ItemInput } from '@/domain/Recipe'
   import { computed, ref } from 'vue'
   import { recipesPerKey } from '@/domain/RecipeFactory'
   import { getBuildingImage, getItemImage } from '@/utils/getImages'
   import { round } from '@/utils/round'
 
-  const props = defineProps<{
+  const props = withDefaults(defineProps<{
     item: ItemAndQuantity
     builder: SparkBuilder
     depth: number
     index?: number
     rateOverride?: number
-  }>()
+    ancestors?: ItemEnum[]
+  }>(), {
+    ancestors: () => [],
+  })
 
   defineEmits(['remove'])
 
@@ -140,11 +154,17 @@
 
   const outputItem = computed(() => props.item.item)
 
+  /** Detect if this item already appeared in the ancestor chain */
+  const isCycle = computed(() => props.ancestors.includes(outputItem.value))
+
+  /** Ancestors to pass down to children (includes current item) */
+  const currentAncestors = computed(() => [...props.ancestors, outputItem.value])
+
   const allRecipes = computed(() => recipesPerKey[props.item.item] ?? [])
   const hasMultipleRecipes = computed(() => allRecipes.value.length > 1)
   const recipe = computed(() => allRecipes.value[recipeIndex.value] ?? null)
 
-  const hasChildren = computed(() => recipe.value && recipe.value.inputs.length > 0)
+  const hasChildren = computed(() => !isCycle.value && recipe.value && recipe.value.inputs.length > 0)
 
   const outputRate = computed(() => {
     if (props.rateOverride !== undefined) return props.rateOverride

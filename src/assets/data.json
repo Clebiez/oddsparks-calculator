@@ -9,8 +9,41 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 0,
     "inputs": []
+  },
+  {
+    "title": "Leaf Knot Trimming",
+    "itemsPerMinute": 3.75,
+    "building": "Sawbench",
+    "output": [
+      {
+        "item": "Wooden Log",
+        "quantity": 6
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Leaf Knot",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Log Printing",
+    "itemsPerMinute": 30,
+    "building": "Ancient Printer",
+    "output": [
+      {
+        "item": "Wooden Log",
+        "quantity": 1
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Subsurface Aether",
+        "quantity": 1
+      }
+    ]
   },
   {
     "title": "Leaves",
@@ -22,8 +55,62 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 0,
     "inputs": []
+  },
+  {
+    "title": "Leaf Knot Cutting",
+    "itemsPerMinute": 3.75,
+    "building": "Sawbench",
+    "output": [
+      {
+        "item": "Leaves",
+        "quantity": 10
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Leaf Knot",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Leaves Printing",
+    "itemsPerMinute": 30,
+    "building": "Ancient Printer",
+    "output": [
+      {
+        "item": "Leaves",
+        "quantity": 10
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Subsurface Aether",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Stellar Leaves",
+    "itemsPerMinute": 0.938,
+    "building": "Greenhouse",
+    "output": [
+      {
+        "item": "Stellar Leaves",
+        "quantity": 20
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Stellar Seed",
+        "quantity": 1
+      },
+      {
+        "item": "Volcanic Soil",
+        "quantity": 2
+      }
+    ]
   },
   {
     "title": "Copper Ore",
@@ -35,7 +122,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 0,
     "inputs": []
   },
   {
@@ -48,11 +134,27 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 0,
     "inputs": []
   },
   {
-    "title": "Stone",
+    "title": "Bark",
+    "itemsPerMinute": 7.5,
+    "building": "Sawbench",
+    "output": [
+      {
+        "item": "Tree Bark",
+        "quantity": 2
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Wooden Log",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "title": "Stone Harvesting",
     "itemsPerMinute": 30,
     "building": "Drill",
     "output": [
@@ -61,11 +163,61 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 0,
     "inputs": []
   },
   {
-    "title": "Quartz",
+    "title": "Stone",
+    "itemsPerMinute": 7.5,
+    "building": "Stonecutter",
+    "output": [
+      {
+        "item": "Stone",
+        "quantity": 2
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Limestone",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "title": "Stone Block Breakdown",
+    "itemsPerMinute": 3.75,
+    "building": "Stonecutter",
+    "output": [
+      {
+        "item": "Stone",
+        "quantity": 8
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Stone Block",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Stone Printing",
+    "itemsPerMinute": 30,
+    "building": "Ancient Printer",
+    "output": [
+      {
+        "item": "Stone",
+        "quantity": 1
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Subsurface Aether",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Quartz Harvesting ",
     "itemsPerMinute": 30,
     "building": "Drill",
     "output": [
@@ -74,11 +226,27 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 0,
     "inputs": []
   },
   {
-    "title": "Limestone",
+    "title": "Quartz ",
+    "itemsPerMinute": 7.5,
+    "building": "Furnace",
+    "output": [
+      {
+        "item": "Quartz",
+        "quantity": 1
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Limestone",
+        "quantity": 3
+      }
+    ]
+  },
+  {
+    "title": "Limestone Harvesting",
     "itemsPerMinute": 30,
     "building": "Drill",
     "output": [
@@ -87,11 +255,27 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 0,
     "inputs": []
   },
   {
-    "title": "Coaƒl",
+    "title": "Limestone",
+    "itemsPerMinute": 3.75,
+    "building": "Stonecutter",
+    "output": [
+      {
+        "item": "Limestone",
+        "quantity": 3
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Coral",
+        "quantity": 4
+      }
+    ]
+  },
+  {
+    "title": "Coal",
     "itemsPerMinute": 7.5,
     "building": "Furnace",
     "output": [
@@ -100,7 +284,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Wooden Log",
@@ -118,7 +301,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Tree Bark",
@@ -140,7 +322,6 @@
         "quantity": 2
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Leaves",
@@ -158,7 +339,6 @@
         "quantity": 4
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Fertiliser",
@@ -180,7 +360,6 @@
         "quantity": 2
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Wooden Log",
@@ -202,7 +381,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Wooden Log",
@@ -220,7 +398,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Sawn Timber",
@@ -238,7 +415,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Leaves",
@@ -260,7 +436,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Sawn Timber",
@@ -282,7 +457,6 @@
         "quantity": 2
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Quartz",
@@ -300,7 +474,6 @@
         "quantity": 3
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Quartz",
@@ -322,7 +495,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Fertiliser",
@@ -344,7 +516,6 @@
         "quantity": 5
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Pebble",
@@ -366,7 +537,6 @@
         "quantity": 2
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Quartz",
@@ -384,7 +554,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Stone",
@@ -402,7 +571,6 @@
         "quantity": 2
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Stone",
@@ -420,7 +588,6 @@
         "quantity": 4
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Wooden Blade",
@@ -429,6 +596,23 @@
       {
         "item": "Stone Plate",
         "quantity": 4
+      }
+    ]
+  },
+  {
+    "title": "Stone Block Cutting",
+    "itemsPerMinute": 3.75,
+    "building": "Stonecutter",
+    "output": [
+      {
+        "item": "Stone Spike",
+        "quantity": 1
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Stone Block",
+        "quantity": 1
       }
     ]
   },
@@ -442,7 +626,6 @@
         "quantity": 2
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Path Tile",
@@ -464,7 +647,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Miasma Vial",
@@ -486,7 +668,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Raw Aether",
@@ -508,7 +689,6 @@
         "quantity": 4
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Fireshroom Cluster",
@@ -530,7 +710,6 @@
         "quantity": 2
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Small Vial",
@@ -552,7 +731,6 @@
         "quantity": 3
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Aether Seed",
@@ -560,6 +738,27 @@
       },
       {
         "item": "Raw Aether",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Extract Aether Segment",
+    "itemsPerMinute": 0.938,
+    "building": "Plant Extractor",
+    "output": [
+      {
+        "item": "Aether Seed",
+        "quantity": 30
+      },
+      {
+        "item": "Aether Crystal",
+        "quantity": 5
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Aether Segment",
         "quantity": 1
       }
     ]
@@ -574,7 +773,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Cleansing Fragment",
@@ -592,7 +790,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Copper Ore",
@@ -610,7 +807,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 0,
     "inputs": []
   },
   {
@@ -623,7 +819,6 @@
         "quantity": 10
       }
     ],
-    "numberOfItems": 3,
     "inputs": [
       {
         "item": "Bumpy Geode",
@@ -649,7 +844,6 @@
         "quantity": 5
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Fireshroom Cluster",
@@ -671,7 +865,6 @@
         "quantity": 2
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Copper Ingot",
@@ -689,7 +882,6 @@
         "quantity": 10
       }
     ],
-    "numberOfItems": 3,
     "inputs": [
       {
         "item": "Geode Cluster",
@@ -715,7 +907,6 @@
         "quantity": 3
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Frozen Log",
@@ -733,7 +924,6 @@
         "quantity": 6
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Frozen Stone",
@@ -751,7 +941,6 @@
         "quantity": 4
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Fertiliser",
@@ -773,7 +962,6 @@
         "quantity": 10
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Leaves",
@@ -795,7 +983,6 @@
         "quantity": 20
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Coral",
@@ -808,23 +995,77 @@
     ]
   },
   {
-    "title": "Stellar Leaves",
+    "title": "Coral",
+    "itemsPerMinute": 1.875,
+    "building": "Stonecutter",
+    "output": [
+      {
+        "item": "Coral",
+        "quantity": 8
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Fluted Coral",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Coral Printing",
+    "itemsPerMinute": 15,
+    "building": "Ancient Printer",
+    "output": [
+      {
+        "item": "Coral",
+        "quantity": 1
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Subsurface Aether",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Extract Coral Seed",
+    "itemsPerMinute": 0.938,
+    "building": "Plant Extractor",
+    "output": [
+      {
+        "item": "Limestone",
+        "quantity": 3
+      },
+      {
+        "item": "Coral",
+        "quantity": 3
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Coral Seed",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Fluted Coral Reef",
     "itemsPerMinute": 0.938,
     "building": "Greenhouse",
     "output": [
       {
-        "item": "Stellar Leaves",
+        "item": "Fluted Coral",
         "quantity": 20
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
-        "item": "Stellar Seed",
+        "item": "Coral Seed",
         "quantity": 1
       },
       {
-        "item": "Volcanic Soil",
+        "item": "Fertiliser",
         "quantity": 2
       }
     ]
@@ -839,7 +1080,6 @@
         "quantity": 10
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Glowshroom",
@@ -861,7 +1101,6 @@
         "quantity": 20
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Copper Ore",
@@ -883,7 +1122,6 @@
         "quantity": 20
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Aether Flower",
@@ -905,7 +1143,6 @@
         "quantity": 5
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Lava Cap",
@@ -927,7 +1164,6 @@
         "quantity": 5
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Leaf Knot",
@@ -949,7 +1185,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Liquid Fertiliser",
@@ -971,7 +1206,6 @@
         "quantity": 20
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Aether Apple",
@@ -993,7 +1227,6 @@
         "quantity": 5
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Limestone",
@@ -1015,7 +1248,6 @@
         "quantity": 3
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Tree Bark",
@@ -1037,7 +1269,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 3,
     "inputs": [
       {
         "item": "Corrupted Spark Token",
@@ -1063,7 +1294,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Tree Bark",
@@ -1081,7 +1311,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Quartz",
@@ -1099,7 +1328,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Leaves",
@@ -1117,7 +1345,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Blue Paint",
@@ -1139,7 +1366,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Pebble",
@@ -1157,7 +1383,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Limestone",
@@ -1175,7 +1400,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Red Paint",
@@ -1197,7 +1421,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Red Paint",
@@ -1219,7 +1442,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Wooden Log",
@@ -1237,7 +1459,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Aether Shard",
@@ -1259,7 +1480,6 @@
         "quantity": 5
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Aether Shard",
@@ -1281,7 +1501,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Stumpy Spark",
@@ -1303,7 +1522,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Stumpy Spark",
@@ -1325,7 +1543,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Carry Spark",
@@ -1347,7 +1564,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Crafty Spark",
@@ -1369,7 +1585,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Stumpy Spark",
@@ -1391,7 +1606,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Stumpy Spark",
@@ -1413,7 +1627,6 @@
         "quantity": 3
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Rocky Spark",
@@ -1435,7 +1648,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Rocky Spark",
@@ -1457,7 +1669,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Boomy Spark",
@@ -1479,7 +1690,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 2,
     "inputs": [
       {
         "item": "Rocky Spark",
@@ -1501,7 +1711,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 3,
     "inputs": [
       {
         "item": "Crafty Spark",
@@ -1527,7 +1736,6 @@
         "quantity": 3
       }
     ],
-    "numberOfItems": 3,
     "inputs": [
       {
         "item": "Slashy Spark",
@@ -1553,7 +1761,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 3,
     "inputs": [
       {
         "item": "Sponge",
@@ -1579,7 +1786,6 @@
         "quantity": 1
       }
     ],
-    "numberOfItems": 3,
     "inputs": [
       {
         "item": "Lava Cap",
@@ -1605,7 +1811,6 @@
         "quantity": 6
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Aetheric Pellet",
@@ -1623,10 +1828,26 @@
         "quantity": 6
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Raw Aether",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Refined Distillation",
+    "itemsPerMinute": 0.469,
+    "building": "Aetheric Distiller",
+    "output": [
+      {
+        "item": "Aether Shard",
+        "quantity": 30
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Refined Aether",
         "quantity": 1
       }
     ]
@@ -1641,10 +1862,72 @@
         "quantity": 6
       }
     ],
-    "numberOfItems": 1,
     "inputs": [
       {
         "item": "Aetheric Clump",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Aether Clump Fusion",
+    "itemsPerMinute": 0.938,
+    "building": "Alchemy Lab",
+    "output": [
+      {
+        "item": "Aetheric Clump",
+        "quantity": 2
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Leaf Knot",
+        "quantity": 2
+      },
+      {
+        "item": "Refined Aether",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Aether Pellet Fusion",
+    "itemsPerMinute": 0.938,
+    "building": "Alchemy Lab",
+    "output": [
+      {
+        "item": "Aetheric Pellet",
+        "quantity": 2
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Leaf Knot",
+        "quantity": 2
+      },
+      {
+        "item": "Raw Aether",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "title": "Extract Aetheric Flower",
+    "itemsPerMinute": 0.938,
+    "building": "Plant Extractor",
+    "output": [
+      {
+        "item": "Aetheric Clump",
+        "quantity": 6
+      },
+      {
+        "item": "Aether Seed",
+        "quantity": 20
+      }
+    ],
+    "inputs": [
+      {
+        "item": "Aether Flower",
         "quantity": 1
       }
     ]
